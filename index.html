@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Coffee Shops</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="d-flex justify-content-center align-items-center">
+      <h1 class="jumbotron">Find Your nearest coffee shop</h1>
+    </header>
+    <section class="details">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+
+            <!-- Sorting Section -->
+            <div class="details-sort d-flex align-items-center p-3">
+              <label>Sort By:</label>
+              <label class="custom-control custom-radio">
+                <input id="sort-distance" data-sort="distance" name="results-sort" type="radio" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Distance</span>
+              </label>
+              <label class="custom-control custom-radio">
+                <input id="sort-expensive" data-sort="expensive" name="results-sort" type="radio" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Expensiveness</span>
+              </label>
+              <div style="display: none;">
+                <input id="latitude" type="text" name="latitude" hidden>
+                <input id="longitude" type="text" name="longitude" hidden>
+              </div>
+            </div>
+
+            <!-- Dinamically add Content  -->
+            <div id="coffeePlaces" class="details-content d-flex flex-wrap">
+
+            </div>
+
+            <!-- Error Modal -->
+            <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Warning</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>The app is won't running just using the magic.<br>It is needed to allow geolocation :)</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <!-- Main.js -->
+    <script src="js/main.js"></script>
+
+  </body>
+</html>

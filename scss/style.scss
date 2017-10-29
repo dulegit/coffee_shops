@@ -1,0 +1,167 @@
+$white: #fff;
+$primaryBack: #c38e6a;
+$secondBack: #ab5c5c;
+$primaryColor: #5c4943;
+$vh100: 100vh;
+
+// GENERAL
+h4,
+p,
+ul {
+  color: $primaryColor;
+}
+
+// HEADER
+header {
+  height: $vh100;
+  background-image: url("../images/cover.jpg");
+  background-position: center;
+  background-size: cover;
+}
+header h1 {
+  color: $white;
+}
+
+
+// SECTION DETAILS
+.details {
+  height: $vh100;
+}
+.details-sort {
+  color: $primaryColor;
+  background-color: $primaryBack;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+}
+.details-sort label {
+  margin: 0 1rem 0 0;
+}
+
+.details-content {
+  margin: 2.5rem 0;
+}
+.details-content .__items {
+  margin: 1rem;
+  flex: 0 0 91.5%;
+}
+.card-body {
+  min-height: 225px;
+}
+.card-body h4 {
+  font-size: 1.25rem;
+}
+.card-body h4,
+.card-body p {
+  margin: 0;
+}
+
+// DETAILS PAGE
+header.details-header {
+  position: relative;
+  padding: 0.5rem;
+  height: auto;
+  background-color: $primaryBack;
+  background-image: none;
+  -webkit-box-shadow: 0px 1px 10px -1px #5c4943;
+  -moz-box-shadow: 0px 1px 10px -1px #5c4943;
+  box-shadow: 0px 1px 10px -1px #5c4943;
+  z-index: 10;
+}
+header.details-header h3 {
+  color: $primaryColor;
+}
+header.details-header h1,
+header.details-header h3 {
+  margin: 0;
+  line-height: 1;
+}
+.details-content .__header h1 {
+  padding-bottom: 5px;
+  color: $secondBack;
+  border-bottom: 5px solid;
+}
+.details-content .__header ul {
+  padding: 0;
+  list-style: none;
+}
+
+// Slider
+.details-slider-for div {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.details-slider-for img {
+  width: 100%;
+}
+.details-slider-nav div {
+  padding: .5rem;
+}
+.details-slider-nav img {
+  width: 100%;
+  max-width: 250px;
+}
+
+@media(min-width: 720px) {
+
+  .details-content .__items {
+    margin: 0.5rem;
+    flex: 0 0 47.65%;
+  }
+
+}
+
+@media(min-width: 992px) {
+
+  .details-content .__items {
+    margin: 0.5rem;
+    flex: 0 0 31.6%;
+  }
+
+}
+
+@media(min-width: 1200px) {
+
+  .details-content .__items {
+    margin: 0.5rem;
+    flex: 0 0 23.555%;
+  }
+
+}
+
+// Bootstrap Override
+.custom-control-input:checked ~ .custom-control-indicator {
+  background-color: $primaryColor;
+}
+.btn-primary {
+  background-color: $secondBack;
+  border-color: $secondBack;
+  transition: .3s ease-out;
+}
+.btn-primary:hover {
+  background-color: $secondBack;
+  border-color: $secondBack;
+  opacity: 0.7;
+  transition: .25s ease-in;
+}
+.jumbotron {
+  margin: 0;
+  background-color: rgba(171, 92, 92, 0.7);
+  text-shadow: 2px 2px 1px $primaryColor;
+}
+.modal-header {
+  background-color: $secondBack;
+  border-radius: 0;
+  color: $white;
+}
+.close,
+.close:focus,
+.close:hover {
+  color: $white;
+}
+
+// Slick Slide
+.slick-slide {
+  outline: none;
+}
