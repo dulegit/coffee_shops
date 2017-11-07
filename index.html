@@ -15,31 +15,61 @@
   </head>
   <body>
     <header class="d-flex justify-content-center align-items-center">
-      <h1 class="jumbotron">Find Your nearest coffee shop</h1>
+      <div class="jumbotron">
+        <h1>Find the nearest coffee shop</h1>
+        <h3>By your taste</h3>
+      </div>
     </header>
-    <section class="details">
-      <div class="container">
+    <section class="search">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 p-0">
 
             <!-- Sorting Section -->
-            <div class="details-sort d-flex align-items-center p-3">
-              <label>Sort By:</label>
-              <label class="custom-control custom-radio">
-                <input id="sort-distance" data-sort="distance" name="results-sort" type="radio" class="custom-control-input">
-                <span class="custom-control-indicator"></span>
-                <span class="custom-control-description">Distance</span>
-              </label>
-              <label class="custom-control custom-radio">
-                <input id="sort-expensive" data-sort="expensive" name="results-sort" type="radio" class="custom-control-input">
-                <span class="custom-control-indicator"></span>
-                <span class="custom-control-description">Expensiveness</span>
-              </label>
+            <div class="search-sort p-3">
+              <div class="form-group __items">
+                <label for="sort-distance" class="col-form-label">Distance</label>
+                <div class="d-flex custom-dropdown">
+                  <select class="form-control" name="sort-distance">
+                    <option value="distance-default" selected="selected" disabled="disabled" hidden>-</option>
+                    <option value="distance-acc">Acceding</option>
+                    <option value="distance-desc">Descending</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group __items">
+                <label for="sort-expensive" class="col-form-label">Expensiveness</label>
+                <div class="d-flex custom-dropdown">
+                  <select class="form-control" name="sort-expensive">
+                    <option value="expensive-default" selected="selected" disabled="disabled" hidden>-</option>
+                    <option value="expensive-acc">Acceding</option>
+                    <option value="expensive-desc">Descending</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group __items">
+                <label for="range-radius" class="col-form-label">Distance Radius</label>
+                <div class="d-flex align-items-center">
+                  <input type="range" name="range-radius" min="0.2" max="10" value="1" step="0.2">
+                  <div class="show-km font-weight-bold font-italic">
+                    <span>1</span>km
+                  </div>
+                </div>
+              </div>
               <div style="display: none;">
                 <input id="latitude" type="text" name="latitude" hidden>
                 <input id="longitude" type="text" name="longitude" hidden>
               </div>
             </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="details">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
 
             <!-- Dinamically add Content  -->
             <div id="coffeePlaces" class="details-content d-flex flex-wrap">

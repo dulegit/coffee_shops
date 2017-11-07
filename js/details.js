@@ -25,7 +25,7 @@
     url: ajaxData.url_venue+'/'+venueId+'?v='+ajaxData.version+'&client_id='+ajaxData.client_id+'&client_secret='+ajaxData.client_secret,
     method: 'GET',
     success: function(data) {
-      // console.log(data);
+       console.log(data);
       $(".shop-name").text(data.response.venue.name);
       $(".shop-range").text(data.response.venue.price.tier);
       $(".shop-distance").text(venueDistance);
